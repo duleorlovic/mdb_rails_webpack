@@ -13,3 +13,14 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "stylesheet/application"
+
+import { Collapse, Ripple, initMDB } from 'mdb-ui-kit/js/mdb.es.min.js'; // Import needed modules
+
+window.Ripple = Ripple;
+
+window.onload = function() {
+  initMDB({ Ripple }) // Initialize imported modules to enable data-attribute init
+  initMDB({ Collapse });
+  console.log("finished onload")
+}
+console.log("finished application.js")
